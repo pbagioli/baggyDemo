@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>@ViewBag.Title</title>
+
+    @Styles.Render("~/bundles/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    @{
+        ViewBag.Title = "Home Page";
+    }
+
+    <div class="container">
+
+        @Html.Partial("_Header")
+        <br />
+        <br />
+        <br />
+        <div class="row" data-ng-view="" data-ng-cloak="">
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/library")
+    @Scripts.Render("~/bundles/Spa")
+
+    <script>
+        jQuery(document).ready(function () {
+            app.registerConstant('config', {
+                CurrentUser: {
+                    @*
+                    GO TO HomeController.cs to populate these data from Intel.Dejavu.Security
+                        For ActiveDirectory info    
+                    Wwid: @ViewBag.CurrentUser.Wwid,
+                    LastName: '@ViewBag.CurrentUser.LastName',
+                    FirstName: '@ViewBag.CurrentUser.FirstName',
+                    FullName: '@ViewBag.CurrentUser.FullName',
+                        
+                    *@
+                    Environment: '@ViewBag.Environment'
+                }
+            });
+            app.run(document);
+        });
+    </script>
+</body>
+</html>

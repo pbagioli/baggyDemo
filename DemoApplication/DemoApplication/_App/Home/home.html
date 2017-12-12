@@ -1,0 +1,30 @@
+
+<template>
+  <require from="./home.css"></require>
+  <div class="row grass">
+    <div class="col-md-1"></div>
+    <div class="col-md-5">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Flexbox Rules</h1>
+          <hr/>
+          <form repeat.for="property of cssProperties">
+            <h3>${property.name}</h3>
+            <label repeat.for="option of property.options">
+              <input type="radio" name="option" model.bind="option" checked.bind="property.selectedValue" change.delegate="updateCss()"/>${option} &nbsp;<br/>
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <div class="adders">
+        <div click.delegate="addFrog('../Content/images/frog-red.svg')" class="bigFrogBox pointer"><img src="../Content/images/frog-red.svg" class="bigFrog"/><i class="fa fa-plus-square bigPlus"></i></div>
+        <div click.delegate="addFrog('../Content/images/frog-yellow.svg')" class="bigFrogBox pointer"><img src="../Content/images/frog-yellow.svg" class="bigFrog"/><i class="fa fa-plus-square bigPlus"></i></div>
+        <div click.delegate="addFrog('../Content/images/frog-green.svg')" class="bigFrogBox pointer"><img src="../Content/images/frog-green.svg" class="bigFrog"/><i class="fa fa-plus-square bigPlus"></i></div>
+      </div>
+      <div css="${cssRules}" class="lake"><img repeat.for="frog of frogs" src="${frog.src}" click.delegate="removeFrog($index)" class="frog pointer"/></div>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+</template>

@@ -1,0 +1,16 @@
+﻿{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [ "es5", "dom", "es2015" ]
+  },
+  "include": [
+    "scripts/typings/**/*.d.ts",
+    "app/**/*"
+
+  ],
+  "exclude": [
+    "jspm_packages",
+    "node_modules",
+    "scripts/typings/fileSaver/*.d.ts"
+  ]
+}

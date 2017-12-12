@@ -1,0 +1,439 @@
+﻿<ol class="progtrckr" data-progtrckr-steps="5">
+    <li class="wizard-title" ng-click="vm.click(1)" ng-class="{'pointer':vm.currentState > 1,'progtrckr-doing':vm.currentState == 1,'progtrckr-done':vm.currentState > 1}">Read Disclaimer</li>
+    <li class="wizard-title" ng-click="vm.click(2)" ng-class="{'pointer':vm.currentState > 2,'progtrckr-todo':vm.currentState < 2,'progtrckr-doing':vm.currentState == 2,'progtrckr-done':vm.currentState > 2}">AccountInfo</li>
+    <li class="wizard-title" ng-click="vm.click(3)" ng-class="{'pointer':vm.currentState > 3,'progtrckr-todo':vm.currentState < 3,'progtrckr-doing':vm.currentState == 3,'progtrckr-done':vm.currentState > 3}">Create Report</li>
+    <li class="wizard-title" ng-click="vm.click(4)" ng-class="{'pointer':vm.currentState > 4,'progtrckr-todo':vm.currentState < 4,'progtrckr-doing':vm.currentState == 4,'progtrckr-done':vm.currentState > 4}">Add Expenses</li>
+    <li class="wizard-title" ng-click="vm.click(5)" ng-class="{'pointer':vm.currentState > 5,'progtrckr-todo':vm.currentState < 5,'progtrckr-doing':vm.currentState == 5,'progtrckr-done':vm.currentState > 5}">Submit</li>
+</ol>
+
+<br />
+
+<div>
+    <div class="row " ng-show="vm.currentState==1">
+        <div class="row ">
+            <div class="col-lg-1">
+
+            </div>
+            <div class="col-lg-11">
+                <h2>
+                    <strong>Disclaimer</strong>
+                </h2>
+                <div class="well well-lg trumpDisclaimer">
+                    
+                    <p>We have so many things that we have to do better... and certainly ipsum is one of them. You have so many different things placeholder text has to be able to do, and I don't believe Lorem Ipsum has the stamina. It’s about making placeholder text great again. That’s what people want, they want placeholder text to be great again. Lorem Ispum is a choke artist. It chokes!</p>
+
+                    <p>Lorem Ipsum is the single greatest threat. We are not - we are not keeping up with other websites. Look at these words. Are they small words? And he referred to my words - if they're small, something else must be small. I guarantee you there's no problem, I guarantee. We have so many things that we have to do better... and certainly ipsum is one of them. He’s not a word hero. He’s a word hero because he was captured. I like text that wasn’t captured.</p>
+
+                    <p>I was going to say something extremely rough to Lorem Ipsum, to its family, and I said to myself, "I can't do it. I just can't do it. It's inappropriate. It's not nice." Lorem Ipsum's father was with Lee Harvey Oswald prior to Oswald's being, you know, shot.</p>
+
+                    <p> I know words. I have the best words. Despite the constant negative ipsum covfefe. Despite the constant negative ipsum covfefe.</p>
+
+                    <p> The other thing with Lorem Ipsum is that you have to take out its family. I was going to say something extremely rough to Lorem Ipsum, to its family, and I said to myself, "I can't do it. I just can't do it. It's inappropriate. It's not nice." You have so many different things placeholder text has to be able to do, and I don't believe Lorem Ipsum has the stamina. I was going to say something extremely rough to Lorem Ipsum, to its family, and I said to myself, "I can't do it. I just can't do it. It's inappropriate. It's not nice."</p>
+                    <p>We have so many things that we have to do better... and certainly ipsum is one of them. You have so many different things placeholder text has to be able to do, and I don't believe Lorem Ipsum has the stamina. It’s about making placeholder text great again. That’s what people want, they want placeholder text to be great again. Lorem Ispum is a choke artist. It chokes!</p>
+
+                    <p>Lorem Ipsum is the single greatest threat. We are not - we are not keeping up with other websites. Look at these words. Are they small words? And he referred to my words - if they're small, something else must be small. I guarantee you there's no problem, I guarantee. We have so many things that we have to do better... and certainly ipsum is one of them. He’s not a word hero. He’s a word hero because he was captured. I like text that wasn’t captured.</p>
+
+                    <p>I was going to say something extremely rough to Lorem Ipsum, to its family, and I said to myself, "I can't do it. I just can't do it. It's inappropriate. It's not nice." Lorem Ipsum's father was with Lee Harvey Oswald prior to Oswald's being, you know, shot.</p>
+
+                    <p> I know words. I have the best words. Despite the constant negative ipsum covfefe. Despite the constant negative ipsum covfefe.</p>
+
+                    <p> The other thing with Lorem Ipsum is that you have to take out its family. I was going to say something extremely rough to Lorem Ipsum, to its family, and I said to myself, "I can't do it. I just can't do it. It's inappropriate. It's not nice." You have so many different things placeholder text has to be able to do, and I don't believe Lorem Ipsum has the stamina. I was going to say something extremely rough to Lorem Ipsum, to its family, and I said to myself, "I can't do it. I just can't do it. It's inappropriate. It's not nice."</p>
+</div>
+                <hr/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-1">
+
+            </div>
+            <div class="col-lg-11">
+                <h4><strong>You are responsible for knowing and understanding your country's Receipt Guidelines.</strong></h4>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div>
+    <div class="row" ng-show="vm.currentState==2">
+        <div class="row">
+            <div class="col-lg-1">
+
+            </div>
+
+            <div class="col-lg-11">
+                <h2>
+                    <strong>Account Info</strong>
+                </h2>
+                <hr />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-1">
+            </div>
+            <div class="col-lg-4">
+                <form name="accountForm" novalidate>
+                    <div class="form-group has-feedback">
+                        <div class="form-group">
+                            <label>Name:</label>
+                            <input required name="name" type="text" class="form-control"
+                                   ng-change="vm.defaultTypeChanged()" ng-model="vm.person.name" />
+                            <p ng-show="accountForm.name.$error.required" class="help-block text-danger">Enter a Name</p>
+                        </div>
+                        <div class="form-group">
+                            <label>Financial Institution:</label>
+                            <input required name="financeName" type="text" class="form-control"
+                                   ng-change="vm.defaultTypeChanged()" ng-model="vm.person.bank.name" />
+                            <p ng-show="accountForm.financeName.$error.required" class="help-block text-danger">Enter an Institution Name</p>
+                        </div>
+                        <div class="form-group">
+                            <label>Routing Number:</label>
+                            <input required type="number" class="form-control" name="route" ng-model="vm.person.route"
+                                   ng-minlength="9" ng-maxlength="9" />
+                            <p ng-show="accountForm.route.$error.minlength" class="help-block text-danger">Routing ID is too short.</p>
+                            <p ng-show="accountForm.route.$error.maxlength" class="help-block text-danger">Routing ID is too long.</p>
+                            <p ng-show="accountForm.route.$error.required" class="help-block text-danger">Enter a Routing ID</p>
+                        </div>
+                        <div class="form-group">
+                            <label>Account Number:</label>
+                            <input required type="number" class="form-control" name="account" ng-model="vm.person.account"
+                                   ng-minlength="9" ng-maxlength="9" />
+                            <p ng-show="accountForm.account.$error.minlength" class="help-block text-danger">Account ID is too short.</p>
+                            <p ng-show="accountForm.account.$error.maxlength" class="help-block text-danger">Account ID is too long.</p>
+                            <p ng-show="accountForm.account.$error.required" class="help-block text-danger">Enter an Account ID</p>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-6">
+                <img src="../../Content/images/check.png" />
+            </div>
+        </div>
+
+    </div>
+</div>
+<div>
+
+
+    <div class="row" ng-show="vm.currentState==3">
+
+        <div class="col-lg-1">
+
+        </div>
+
+        <div class="col-lg-11">
+            <br/>
+            <br />
+            <div class="row">
+                <form name="reportForm" novalidate>
+                    <div class="col-lg-11">
+                        <div class="form-group">
+                            <label class="big-title">Report Name</label>
+                            <input required name="reportName" type="text" class="form-control long-input"
+                                   placeholder="Enter Name" ng-model="vm.report.name">
+                            <p ng-show="reportForm.reportName.$error.required && !reportForm.reportName.$pristine" class="help-block text-danger">Enter a report name</p>
+                        </div>
+                        <div class="form-group" >
+                            <label class="big-title" for="reportDescription" ng-class="{'text-muted':!vm.report.name}" >Description</label>
+                            <input ng-disabled="!vm.report.name" type="text" required ng-model="vm.report.description" class="form-control long-input" id="reportDescription" name="reportDescription" placeholder="Report Description">
+                            <p ng-show="reportForm.reportDescription.$error.required && !reportForm.reportDescription.$pristine" class="help-block text-danger">Enter a report Description</p>
+                        </div>
+                        <div class="form-group">
+                            <label class="big-title" ng-class="{'text-muted':!vm.report.description}">Cost Center</label>
+                            <input ng-disabled="!vm.report.description" type="text" required ng-model="vm.report.costCenter" class="form-control long-input" name="costCenter" placeholder="Cost Center">
+                            <p ng-show="reportForm.costCenter.$error.required && !reportForm.costCenter.$pristine" class="help-block text-danger">Enter a cost center</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <label class="big-title" ng-class="{'text-muted':!vm.report.costCenter}" for="startDate">Start Date</label>
+                                <input  ng-class="{'text-muted':!vm.report.costCenter}" ng-disabled="!vm.report.costCenter" type="text" class="form-control" id="startDate"
+                                       datepicker-popup="MM-dd-yyyy"
+                                       is-open="vm.valuationStartPickerIsOpen"
+                                       ng-click="vm.valuationStartPickerIsOpen = !vm.valuationStartPickerIsOpen"
+                                       ng-change="vm.report.endDate = null"
+                                       ng-model="vm.report.startDate"
+                                       required />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-1">
+
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <label class="big-title" ng-class="{'text-muted':!vm.report.costCenter}" for="endDate">End Date</label>
+                                <input ng-class="{'text-muted':!vm.report.costCenter}" ng-disabled="!vm.report.costCenter" type="text" class="form-control" id="endDate"
+                                       datepicker-popup="MM-dd-yyyy"
+                                       is-open="vm.valuationEndDatePickerIsOpen"
+                                       ng-click="vm.valuationEndDatePickerIsOpen = !vm.valuationEndDatePickerIsOpen"
+                                       ng-model="vm.report.endDate"
+                                       min-date="vm.report.startDate"
+                                       required />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+
+<div>
+    <div class="row" ng-show="vm.currentState==4">
+
+        <div class="col-lg-11">
+            <h2>
+                <strong>Add Expenses</strong>
+            </h2>
+            <hr />
+        </div>
+        <div id="container">
+            <div id="navbar">
+                <div style="margin-top: 10px">
+                    <div class="moneyUnderline text-center">Total Refund</div>
+                    <i class="fa fa-usd"></i> <span class="money" odometer="vm.report.total" odometer-options="{theme: 'minimal', duration: 1000}"></span>
+                </div>
+                <br />
+                <br />
+                <div class="btn btn-lg btn-success addButton" data-toggle="modal" data-target="#addExpense"> <i class="glyphicon glyphicon-plus"> </i> Expense</div>
+            </div>
+            <div id="content">
+                <div>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <div class="table table-striped small-table">
+                        <table class="table">
+                            <thead class="header-intel">
+                            <th></th>
+                            <th>Expense</th>
+                            <th>ExpenseType</th>
+                            <th>Date</th>
+                            <th>Amount</th>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="item in vm.report.items">
+                                <td>
+                                    <div ng-click="vm.remove(item)" class="btn btn-sm btn-default"><i class="glyphicon glyphicon-trash"> </i>
+                                    </div>
+                                    <div class="btn btn-sm btn-default"><i class="glyphicon glyphicon-pencil"> </i>
+                                    </div></td>
+                                <td>{{item.name}}</td>
+                                <td>{{item.type}}</td>
+                                <td>{{item.startDate | date: 'shortDate'}}</td>
+                                <td>{{item.amount}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+</div>
+<div>
+    <div class="row" ng-show="vm.currentState==5">
+        <h2>
+            <strong>Review & Submit</strong>
+        </h2>
+        <hr />
+        <div class="col-lg-5">
+            <dl class="dl-horizontal summary">
+                <dt>Submitter</dt>
+                <dd>{{vm.person.name}}</dd>
+                <dt>Report Name</dt>
+                <dd>{{vm.report.name}}</dd>
+                <dt>Description</dt>
+                <dd>{{vm.report.description}}</dd>
+                <dt>Start Date</dt>
+                <dd>{{vm.report.startDate| date: 'shortDate'}}</dd>
+                <dt>End Date</dt>
+                <dd>{{vm.report.endDate| date: 'shortDate'}}</dd>
+                <dt>Items Expensed</dt>
+                <dd>{{vm.report.items.length}}</dd>
+
+
+            </dl>
+        </div>
+        <div class="col-lg-5">
+            <dl class="dl-horizontal summary">
+                <dt>Cost Center</dt>
+                <dd>{{vm.report.costCenter}}</dd>
+                <dt>Bank</dt>
+                <dd>{{vm.person.bank.name}}</dd>
+                <dt>Account</dt>
+                <dd>{{vm.person.account}}</dd>
+                <dt>Routing ID</dt>
+                <dd>{{vm.person.route}}</dd>
+                <dt>Expense(s) </dt>
+                <dd ng-model="vm.report.total">${{vm.report.total | number: 2}}</dd>
+
+            </dl>
+        </div>
+    </div>
+    <div class="row" ng-show="vm.currentState==5">
+        <div class="well-lg">
+            <strong>Legal Jargon:</strong> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+        </div>
+        <div class="checkbox text-center">
+            <label id="iAgree">
+                <input type="checkbox" ng-model="vm.agree"> <strong>I agree</strong> 
+            </label>
+        </div>
+
+    </div>
+</div>
+
+<div>
+    <div class="row" ng-show="vm.currentState==6">
+
+        <div class="col-lg-11">
+            <h2>
+                <strong>Thank You</strong>
+            </h2>
+            <hr />
+            <div class="well-lg">
+                <strong>You'll get your money:</strong> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class ="col-lg-12">
+            <button class="btn btn-lg btn-default centeredButton" ng-show="vm.currentState==6" ng-click="vm.goHome()"> Go Home </button>
+        </div>
+    </div>
+
+</div>
+
+<div class="row bottom pull-right">
+    <button class="btn btn-md btn-success pull-right bigButton" ng-show="vm.currentState == 5" ng-disabled="!vm.agree" ng-click="vm.nextState()"> Submit </button>
+    <button class="btn btn-md btn-success pull-right bigButton" ng-disabled="(accountForm.$invalid && vm.currentState ==2 ) ||(reportForm.$invalid && vm.currentState ==3)" ng-show="vm.currentState < 5" ng-click="vm.nextState()"> Continue </button>
+    <button class="btn btn-md btn-default pull-right bigButton" ng-disabled="vm.currentState == 1" ng-show="vm.currentState!=6" ng-click="vm.previousState()"> Previous </button>
+</div>
+
+
+<div class="modal fade" style="margin-top: 10px;" id="addExpense" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header ">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Add Expense</h4>
+            </div>
+            <div class="modal-body">
+                <table class="table no-border " border="0" ng-show="vm.modalStage == 'menu'">
+                    <thead>
+
+                    </thead>
+                    <tbody>
+                    <tr>
+                    <tr>
+                        <td>
+                            <div class="menu-big-option btn btn-default" ng-click="vm.changeModalStage('auto')"><i class="bigIcon fa fa-cutlery fa-5x"></i><br /><br /><span class="menu-text-big">Food</span></div>
+                        </td>
+                        <td>
+                            <div class="menu-big-option btn btn-default"><i class="bigIcon fa fa-plane fa-5x"></i><br /><br /><span class="menu-text-big">Air Fare</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="menu-big-option btn btn-default"><i class="bigIcon fa fa-car fa-5x"></i><br /><br /><span class="menu-text-big">Tranportation</span></div>
+                        </td>
+                        <td>
+                            <div class="menu-big-option btn  btn-default"><i class="bigIcon fa fa-bed fa-5x"></i><br /><br /><span class="menu-text-big">Lodging</span></div>
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+                <table class="table no-border " border="0" ng-show="vm.modalStage == 'menu'">
+                    <thead>
+
+                    </thead>
+                    <tbody>
+
+                    <tr>
+                        <td>
+                            <div class="menu-small-option btn btn btn-default"><i class=" fa fa-users fa-2x"></i><br /><br /><span class="menu-text-small">Meetings</span></div>
+                            <div class="menu-small-option btn btn btn-default"><i class=" fa fa-credit-card fa-2x"></i><br /><br /><span class="menu-text-small">Card Management</span></div>
+                            <div class="menu-small-option btn btn btn-default"><i class=" fa fa-wifi fa-2x"></i><br /><br /><span class="menu-text-small">Communications</span></div>
+                            <div class="menu-small-option btn btn btn-default"><i class=" fa fa-line-chart fa-2x"></i><br /><br /><span class="menu-text-small">Sales & Marketing</span></div>
+                            <div class="menu-small-option btn btn btn-default"><i class=" fa fa-laptop fa-2x"></i><br /><br /><span class="menu-text-small">Computer</span></div>
+                            <div class="menu-small-option btn btn btn-default"><i class=" fa fa-suitcase fa-2x"></i><br /><br /><span class="menu-text-small">Other Travel</span></div>
+                            <div class="menu-small-option btn btn btn-default"><i class=" fa fa-usd fa-2x"></i><br /><br /><span class="menu-text-small">Other Non-Travel</span></div>
+                        </td>
+
+                    </tr>
+
+                    </tbody>
+                </table>
+                <form name="autoForm" novalidate ng-show="vm.modalStage == 'auto'">
+                    <div>
+                        <div class="form-group">
+                            <label>Meal Type</label>
+                            <select ng-model="vm.expense.type" class="form-control">
+                                <option>Employee Meals</option>
+                                <option>Business Meals</option>
+                                <option>Government Meals</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>City</label>
+                            <input required name="city" type="text" class="form-control " ng-change="vm.valueSelected()"
+                                   placeholder="Enter City" ng-model="vm.expense.city">
+                            <p ng-show="autoForm.city.$error.required && !autoForm.city.$pristine " class="help-block text-danger">Enter a Location</p>
+                        </div>
+                        <div class="form-group">
+                            <label>Payment Type</label>
+                            <select class="form-control" >
+                                <option>Cash/Personal Credit Card</option>
+                                <option>Business Credit Card</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Amount</label>
+                            <input required name="amount" type="number" class="form-control "
+                                   ng-change="vm.valueSelected()"
+                                   placeholder="Enter an Amount" ng-model="vm.expense.amount">
+                            <p ng-show="autoForm.amount.$error.required" class="help-block text-danger">Enter an amount</p>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <label for="startDate">Date</label>
+                                <input required placeholder="select" name="date" ng-model="vm.expense.date" type="text" class="form-control" id="startDate"
+                                       datepicker-popup="MM-dd-yyyy"
+                                       ng-change="vm.valueSelected()"
+                                       is-open="vm.expensePickerIsOpen"
+                                       ng-click="vm.expensePickerIsOpen = !vm.expensePickerIsOpen"
+                                       ng-model="vm.expenseDate"
+                                       min-date="vm.report.startDate"
+                                       max-date="vm.report.endDate"
+                                       required />
+                            </div>
+                            <p ng-show="autoForm.date.$error.required" class="help-block text-danger">Enter a date</p>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+
+            <div class="modal-footer">
+                <button id="addExpenseButton" class="btn btn-md btn-success pull-right bigButton" ng-show="vm.modalStage == 'auto'" ng-disabled="autoForm.$invalid" ng-click="vm.addExpense()">Add</button>
+                <button type="button" class="btn btn-default" ng-click="vm.modalStage = 'menu'" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+  
+</div>

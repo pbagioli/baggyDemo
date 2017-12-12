@@ -1,0 +1,84 @@
+﻿<h4 class="text-success text-center menu-header">Validation Demos</h4>
+<form name="editForm" style="width: 600px" novalidate>
+    <div class="panel panel-info">
+        <div class="panel-heading "></div>
+        <div class="panel-body">
+            <div class="form-group has-feedback">
+                <div class="form-group">
+                    <label>Name:</label>
+                    <input required name="name" type="text" class="form-control" ng-change="vm.defaultTypeChanged()" ng-model="vm.person1.name" />
+                    <p ng-show="editForm.name.$error.required" class="help-block text-danger">Enter a Name</p>
+                </div>
+
+                <div class="form-group">
+                    <label>WWID:</label>
+                    <input required type="number" class="form-control" name="wwid" ng-model="vm.person1.wwid" ng-minlength="8" ng-maxlength="8" />
+                    <p ng-show="editForm.wwid.$error.minlength" class="help-block text-danger">MMID is too short.</p>
+                    <p ng-show="editForm.wwid.$error.maxlength" class="help-block text-danger">MMID is too long.</p> 
+                    <p ng-show="editForm.wwid.$error.required" class="help-block text-danger">Enter a WWID</p>
+                </div>
+                <div class="form-group">
+                    <label>Email:</label>
+                    <input required type="email" class="form-control" name="email" ng-model="vm.person1.email"  />
+                    <p ng-show="editForm.email.$error.required" class="help-block text-danger">Enter an email</p>  
+                    <p ng-show="editForm.email.$error.email" class="help-block text-danger">Must include an email extension</p>  
+                </div>
+
+            </div>
+            <div class="panel-footer">
+                <span class="pull-right">
+                    <button id="save2" ng-disabled="editForm.$invalid " class="btn btn-default btn-lg" ng-click="vm.save()"><i class="intelicon-save-solid"></i></button>
+                    <button class="btn btn-default btn-lg " ng-click="vm.cancel()"><i class="intelicon-close-solid text-danger"></i></button>
+                </span>
+                <div style="clear: both;"></div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<div >
+    <pre>
+        &lt;form name="editForm" style="width: 600px" novalidate&gt;
+            &lt;div class="panel panel-info"&gt;
+                &lt;div class="panel-heading "&gt;&lt;/div&gt;
+                &lt;div class="panel-body"&gt;
+                    &lt;div class="form-group has-feedback"&gt;
+                        &lt;div class="form-group"&gt;
+                            &lt;label&gt;Name:&lt;/label&gt;
+                            &lt;input required name="name" type="text" class="form-control" 
+                                   ng-change="vm.defaultTypeChanged()" ng-model="vm.person1.name" /&gt;
+                            &lt;p ng-show="editForm.name.$error.required" class="help-block text-danger"&gt;Enter a Name&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class="form-group"&gt;
+                            &lt;label&gt;WWID:&lt;/label&gt;
+                            &lt;input required type="number" class="form-control" name="wwid" ng-model="vm.person1.wwid" 
+                                   ng-minlength="8" ng-maxlength="8" /&gt;
+                            &lt;p ng-show="editForm.wwid.$error.minlength" class="help-block text-danger"&gt;MMID is too short.&lt;/p&gt;
+                            &lt;p ng-show="editForm.wwid.$error.maxlength" class="help-block text-danger"&gt;MMID is too long.&lt;/p&gt;
+                            &lt;p ng-show="editForm.wwid.$error.required" class="help-block text-danger"&gt;Enter a WWID&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class="form-group"&gt;
+                            &lt;label&gt;Email:&lt;/label&gt;
+                            &lt;input required type="email" class="form-control" name="email" ng-model="vm.person1.email" /&gt;
+                            &lt;p ng-show="editForm.email.$error.required" class="help-block text-danger"&gt;Enter an email&lt;/p&gt;
+                            &lt;p ng-show="editForm.email.$error.email" class="help-block text-danger"&gt;Must include an email extension&lt;/p&gt;
+                        &lt;/div&gt;
+
+                    &lt;/div&gt;
+                    &lt;div class="panel-footer"&gt;
+                        &lt;span class="pull-right"&gt;
+                            &lt;button id="save" ng-disabled="editForm.$invalid " class="btn btn-default btn-lg" ng-click="vm.save()"&gt;
+                                 &lt;i class="intelicon-save-solid"&gt;&lt;/i&gt;
+                            &lt;/button&gt;
+                            &lt;button class="btn btn-default btn-lg " ng-click="vm.cancel()"&gt;
+                                &lt;i class="intelicon-close-solid text-danger"&gt;&lt;/i&gt;
+                            &lt;/button&gt;
+                        &lt;/span&gt;
+                        &lt;div style="clear: both;"&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/form&gt;
+
+    </pre>
+</div>

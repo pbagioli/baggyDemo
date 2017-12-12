@@ -1,0 +1,89 @@
+body.app {
+  padding-top: 45px;
+  font-family: "Intel Clear","Helvetica Neue",Helvetica,Arial,sans-serif; }
+
+.securityDirections {
+  font-size: 18px !important;
+  margin-left: 20px;
+  margin-top: 20px; }
+
+.menu-text {
+  color: white !important; }
+
+.header {
+  background-color: #0071c5;
+  color: red !important;
+  font-size: 20px;
+  z-index: 1000;
+  padding: 10px 0px; }
+  .header .maxplan-brand {
+    padding: 0px 14px;
+    text-decoration: none; }
+
+.pointer {
+  cursor: pointer !important; }
+
+#menu {
+  background-color: #0071c5;
+  padding-top: 0;
+  padding-bottom: 0; }
+  #menu .brand-title {
+    font-size: 22px;
+    font-weight: bold; }
+  #menu .brand-subtitle {
+    font-size: 14px;
+    color: #e8f2f9; }
+  #menu .brand-image {
+    align-self: center;
+    margin-right: 10px; }
+  #menu .navbar-brand {
+    padding: 0; }
+  #menu .nav-link {
+    padding-top: 16px; }
+
+#app .table-striped tbody tr:nth-of-type(odd) {
+  background-color: #e8f2f9; }
+
+#app [busy\.bind] {
+  min-height: 70px; }
+
+#app .busy-overlay {
+  margin: auto;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  z-index: 50;
+  background-color: rgba(128, 128, 128, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70px; }
+  #app .busy-overlay .busy-overlay-message {
+    z-index: 1000;
+    background-color: #0071c5;
+    padding: 10px;
+    color: #FFF;
+    font-size: 1.5em;
+    font-weight: bold; }
+
+.btn {
+  cursor: pointer; }
+
+.bootbox.modal.fade.in {
+  opacity: 1 !important; }
+  .bootbox.modal.fade.in .modal-dialog {
+    transform: translate(0, 0) !important; }
+  .bootbox.modal.fade.in .modal-header {
+    display: block; }
+    .bootbox.modal.fade.in .modal-header button.bootbox-close-button {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      opacity: .5; }
+  .bootbox.modal.fade.in .modal-footer button {
+    cursor: pointer; }
+
+.modal-backdrop.fade.in {
+  opacity: .5 !important; }

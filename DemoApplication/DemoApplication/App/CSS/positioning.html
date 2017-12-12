@@ -1,0 +1,55 @@
+﻿<h4 class="text-success text-center menu-header">NG-Class Demos</h4>
+
+
+<div class="row">
+
+    <span class="positioning-label text-info">Rectangle</span>
+    <div class="btn-group options-group " role="group" data-toggle="radio" id="recGroup">
+        <button type="button" ng-class="{'selected':vm.rectangle.position=='static'}" ng-click="vm.changePosition(vm.rectangle, 'static')" class="btn btn-default" popover-placement="top" popover="{{vm.getBehavior('static')}}" popover-trigger="mouseenter">Static</button>
+        <button type="button" ng-class="{'selected':vm.rectangle.position=='fixed'}" ng-click="vm.changePosition(vm.rectangle, 'fixed')" class="btn btn-default" popover-placement="top" popover="{{vm.getBehavior('fixed')}}" popover-trigger="mouseenter">Fixed</button>
+        <button type="button" ng-class="{'selected':vm.rectangle.position=='relative'}" ng-click="vm.changePosition(vm.rectangle, 'relative')" class="btn btn-default" popover-placement="top" popover="{{vm.getBehavior('relative')}}" popover-trigger="mouseenter">Relative</button>
+        <button type="button" ng-class="{'selected':vm.rectangle.position=='absolute'}" ng-click="vm.changePosition(vm.rectangle, 'absolute')" class="btn btn-default" popover-placement="top" popover="{{vm.getBehavior('absolute')}}" popover-trigger="mouseenter">Absolute</button>
+    </div>
+   
+    <div class="row " style="margin-left: 2px;">
+        <div class="recMenu">
+            <div class="row">
+                <span class="positioning-label text-success">Circle</span>
+                <div class="btn-group options-group pull-right " role="group" data-toggle="radio" id="circGroup">
+                    <button ng-class="{'selected':vm.circle.position=='static'}" type="button" ng-click="vm.changePosition(vm.circle, 'static')" class="btn btn-default" popover-placement="top" popover="{{vm.getBehavior('static')}}" popover-trigger="mouseenter">Static</button>
+                    <button ng-class="{'selected':vm.circle.position=='fixed'}" type="button" ng-click="vm.changePosition(vm.circle, 'fixed')" class="btn btn-default" popover-placement="top" popover="{{vm.getBehavior('fixed')}}" popover-trigger="mouseenter">Fixed</button>
+                    <button ng-class="{'selected':vm.circle.position=='relative'}" type="button" ng-click="vm.changePosition(vm.circle, 'relative')" class="btn btn-default" popover-placement="top" popover="{{vm.getBehavior('relative')}}" popover-trigger="mouseenter">Relative</button>
+                    <button ng-class="{'selected':vm.circle.position=='absolute'}" type="button" ng-click="vm.changePosition(vm.circle, 'absolute')" class="btn btn-default" popover-placement="top" popover="{{vm.getBehavior('absolute')}}" popover-trigger="mouseenter">Absolute</button>
+                </div>
+            </div>
+            <div class="row">
+                <span class="positioning-label text-primary">Square</span>
+                <div class="btn-group options-group pull-right " role="group" data-toggle="radio" id="sqGroup">
+                    <button ng-class="{'selected':vm.square.position=='static'}" type="button" ng-click="vm.changePosition(vm.square, 'static')" class="btn btn-default" popover-placement="top" popover="{{vm.getBehavior('static')}}" popover-trigger="mouseenter">Static</button>
+                    <button ng-class="{'selected':vm.square.position=='fixed'}" type="button" ng-click="vm.changePosition(vm.square, 'fixed')" class="btn btn-default" popover-placement="top" popover="{{vm.getBehavior('fixed')}}" popover-trigger="mouseenter">Fixed</button>
+                    <button ng-class="{'selected':vm.square.position=='relative'}" type="button" ng-click="vm.changePosition(vm.square, 'relative')" class="btn btn-default" popover-placement="top" popover="{{vm.getBehavior('relative')}}" popover-trigger="mouseenter">Relative</button>
+                    <button ng-class="{'selected':vm.square.position=='absolute'}" type="button" ng-click="vm.changePosition(vm.square, 'absolute')" class="btn btn-default" popover-placement="top" popover="{{vm.getBehavior('absolute')}}" popover-trigger="mouseenter">Absolute</button>
+                </div>
+            </div>
+            <div class="row">
+                <span class="positioning-label text-danger">Triangle</span>
+                <div class="btn-group options-group pull-right " role="group" data-toggle="radio" id="triGroup">
+                    <button ng-class="{'selected':vm.triangle.position=='static'}" type="button" ng-click="vm.changePosition(vm.triangle, 'static')" class="btn btn-default" popover-placement="top" popover="{{vm.getBehavior('static')}}" popover-trigger="mouseenter">Static</button>
+                    <button ng-class="{'selected':vm.triangle.position=='fixed'}" type="button" ng-click="vm.changePosition(vm.triangle, 'fixed')" class="btn btn-default" popover-placement="top" popover="{{vm.getBehavior('fixed')}}" popover-trigger="mouseenter">Fixed</button>
+                    <button ng-class="{'selected':vm.triangle.position=='relative'}" type="button" ng-click="vm.changePosition(vm.triangle, 'relative')" class="btn btn-default" popover-placement="top" popover="{{vm.getBehavior('relative')}}" popover-trigger="mouseenter">Relative</button>
+                    <button ng-class="{'selected':vm.triangle.position=='absolute'}" type="button" ng-click="vm.changePosition(vm.triangle, 'absolute')" class="btn btn-default" popover-placement="top" popover="{{vm.getBehavior('absolute')}}" popover-trigger="mouseenter">Absolute</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <br />
+</div>
+
+<div class="super-container">
+    <div class="rectangle" ng-class="vm.rectangle.position">
+        <div class="circle" ng-class="vm.circle.position"></div>
+        <div class="square" ng-class="vm.square.position"></div>
+        <div class="triangle" ng-class="vm.triangle.position"></div>
+    </div>
+</div>

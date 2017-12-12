@@ -1,0 +1,34 @@
+﻿template
+	require(from="./home.css")
+	
+	.row.grass
+		.col-md-1
+		.col-md-5
+			.row
+				.col-md-12
+					h1 Flexbox Rules
+					hr
+					form(repeat.for="property of cssProperties")
+						h3 ${property.name}
+						label(repeat.for="option of property.options")
+							input(type="radio" name="option" model.bind="option" checked.bind="property.selectedValue" change.delegate="updateCss()")
+							| ${option} &nbsp;
+							br
+						
+
+				
+		.col-md-5
+			.adders
+				.bigFrogBox.pointer(click.delegate="addFrog('../Content/images/frog-red.svg')")
+					img.bigFrog(src="../Content/images/frog-red.svg")
+					i.fa.fa-plus-square.bigPlus
+				.bigFrogBox.pointer(click.delegate="addFrog('../Content/images/frog-yellow.svg')")
+					img.bigFrog(src="../Content/images/frog-yellow.svg")
+					i.fa.fa-plus-square.bigPlus
+				.bigFrogBox.pointer(click.delegate="addFrog('../Content/images/frog-green.svg')")
+					img.bigFrog(src="../Content/images/frog-green.svg")
+					i.fa.fa-plus-square.bigPlus
+			.lake(css="${cssRules}")
+				img.frog.pointer(repeat.for="frog of frogs" src="${frog.src}" click.delegate="removeFrog($index)")
+			
+		.col-md-1

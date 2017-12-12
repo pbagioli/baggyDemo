@@ -1,0 +1,70 @@
+# Build Folders (you can keep bin if you'd like, to store dlls and pdbs)
+[Bb]in/
+[Oo]bj/
+
+# mstest test results
+TestResults
+
+
+# User-specific files
+*.suo
+*.user
+*.sln.docstates
+*.dll
+
+/DemoApplication/DemoApplication/App/*.js
+/DemoApplication/DemoApplication/App/*.js.map
+/DemoApplication/DemoApplication/App/**/*.js
+/DemoApplication/DemoApplication/App/**/*.js.map
+/DemoApplication/DemoApplication/Tests/*.js
+/DemoApplication/DemoApplication/Tests/*.js.map
+
+# Build results
+*.vspscc
+*.vssscc
+
+# ReSharper is a .NET coding add-in
+_ReSharper*
+
+# NCrunch
+*.ncrunch*
+.*crunch*.local.xml
+
+# NuGet Packages Directory
+packages
+
+# nodejs modules
+node_modules
+
+# Ignore Publish directory and contents
+Publish
+
+# Others
+artifacts
+DemoApplication/**/*.js
+*.dbmdl
+*.bak
+*.xap
+/Source/Reports/Model.*.settings
+/Source/Reports/Model.bim.layout
+/DemoApplication/DemoApplication/App/CSS/*.js
+/DemoApplication/DemoApplication/App/*.js
+/DemoApplication/DemoApplication/App/Common/*.js
+/DemoApplication/DemoApplication/App/Concur/*.js
+/DemoApplication/DemoApplication/App/CSS/*.js
+/DemoApplication/DemoApplication/App/Home/*.js
+/DemoApplication/DemoApplication/App/Models/*.js
+/DemoApplication/DemoApplication/App/Services/*.js
+/DemoApplication/DemoApplication/App/Validation/*.js
+/DemoApplication/DemoApplication/Tests/*.js
+/DemoApplication/DemoApplication/App/Common/*.map
+/DemoApplication/DemoApplication/obj/Debug/*.cache
+/DemoApplication/DemoApplication/bin/*.dll
+/DemoApplication/DemoApplication/obj/Debug/*.dll
+*.map
+*.pdb
+*.map
+*.pdb
+*.map
+/DemoApplication/DemoApplication/bin/*.pdb
+/DemoApplication/DemoApplication/obj/Debug/*.pdb
